@@ -38,7 +38,7 @@
                                     </div>
                                     <div class="sherah-progress-card__button">
                                         <p class="sherah-progress-card__text sherah-color3">2023</p>
-                                        <a href="#" class="sherah-see-all">See details</a>
+                                        <a href="/ExportInvoice/" class="sherah-see-all">See details</a>
                                     </div>
 
                                 </div>
@@ -72,7 +72,7 @@
                                         <p class="sherah-progress-card__text sherah-color2">
                                             Tổng SL: @ViewBag.ProductsQuantity.TongSoLuong
                                         </p>
-                                        <a href="#" class="sherah-see-all">See details</a>
+                                        <a href="/Products" class="sherah-see-all">See details</a>
                                     </div>
 
                                 </div>
@@ -107,14 +107,14 @@
                                         <span class="sherah-pcolor">Khách hàng</span>
                                         <h4 class="sherah-progress-card__title">
                                             <b class="count-animate"
-                                               style="text-align: center">@ViewBag.CustomersQuantity</b>
+                                               style="text-align: center">@(ViewBag.CustomersQuantity < 10 ? "0" : "")@ViewBag.CustomersQuantity</b>
                                         </h4>
                                     </div>
                                     <div class="sherah-progress-card__button">
                                         <p class="sherah-progress-card__text sherah-color1">
                                             2023
                                         </p>
-                                        <a href="#" class="sherah-see-all">See details</a>
+                                        <a href="/KhachHang" class="sherah-see-all">See details</a>
                                     </div>
 
                                 </div>
@@ -149,14 +149,14 @@
                                         <span class="sherah-pcolor">Nhân viên</span>
                                         <h4 class="sherah-progress-card__title">
                                             <b class="count-animate"
-                                               style="text-align: center">@ViewBag.StaffsQuantity</b>
+                                               style="text-align: center">@(ViewBag.StaffsQuantity < 10 ? "0" : "")@ViewBag.StaffsQuantity</b>
                                         </h4>
                                     </div>
                                     <div class="sherah-progress-card__button">
                                         <p class="sherah-progress-card__text sherah-color4">
-
+                                            Hiện nay
                                         </p>
-                                        <a href="#" class="sherah-see-all">See details</a>
+                                        <a href="/NhanVien" class="sherah-see-all">See details</a>
                                     </div>
                                 </div>
                             </div>
