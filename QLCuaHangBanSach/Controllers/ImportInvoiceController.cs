@@ -166,11 +166,11 @@ namespace QLCuaHangBanSach.Controllers
 				s += (double)(item.SoLuong * item.DonGia);
 			}
 			ViewBag.TongTien = s;
-			ViewBag.VAT = invoice.VAT;
-			ViewBag.ChietKhau = invoice.ChietKhau;
+			ViewBag.VAT = (double)invoice.VAT;
+			ViewBag.ChietKhau = (double)invoice.ChietKhau;
 			ViewBag.VATAmount = s * (double)(invoice.VAT) / 100;
 			ViewBag.ChietKhauAmount = s * (double)(invoice.ChietKhau) / 100;
-			ViewBag.ConLai = invoice.TongTien;
+			ViewBag.ConLai = (double)invoice.TongTien;
 			return View(details);
 		}
 	}
