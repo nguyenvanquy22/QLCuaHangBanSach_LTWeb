@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using QLCuaHangBanSach.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<DBCuaHangBanSachContext>(options => options
+.UseSqlServer(builder.Configuration.GetConnectionString("DBCuaHangBanSachContext")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -22,6 +28,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");
+	pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();

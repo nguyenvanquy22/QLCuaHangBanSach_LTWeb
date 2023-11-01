@@ -2401,6 +2401,16 @@ Version:	1.0.0
 	box-shadow: 0px 0px 15px #0000002b;
 }
 
+.sherah-table__vendor-img1 {
+	max-width: 46px;
+}
+
+.sherah-table__vendor-img1 img {
+	border: 3px solid #fff;
+	max-width: 46px;
+	box-shadow: 0px 0px 15px #0000002b;
+}
+
 .dataTables_wrapper  select {
 	background-color: #F3F4F7;
 	border: 1px solid #E2E7F1;
