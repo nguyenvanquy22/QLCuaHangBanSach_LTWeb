@@ -56,11 +56,10 @@ namespace QLCuaHangBanSach.Controllers
 			var customersQuantity = db.Hdbs
 										.Include(h => h.MaKhNavigation)
 										.Where(h => h.NgayBan.Year == DateTime.Now.Year)
-										//.GroupBy(c => c.MaKhNavigation.MaKh)
-										.Select(g => g.MaKh.Count())
-										.FirstOrDefault();
-
-			if (customersQuantity != 0)
+                                        .Select(h => h.MaKhNavigation.MaKh)
+										.Distinct()
+										.Count();
+            if (customersQuantity != 0)
 			{
 				ViewBag.CustomersQuantity = customersQuantity;
 			}
